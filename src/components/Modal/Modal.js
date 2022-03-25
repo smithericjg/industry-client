@@ -43,9 +43,11 @@ export default class Modal extends React.Component {
                       Not for this product
                     </button>
                   
-                  <button className='connectBtn'>
-                    Find matching vendors
-                  </button>
+                  <Link to="/vendor">
+                    <button className='connectBtn'>
+                      Find matching vendors
+                    </button>
+                  </Link>
                 </div>
               </div>
             </form>
