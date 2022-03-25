@@ -15,7 +15,7 @@ export default class App extends Component {
         <Switch>
           <Route path="/" exact component={InitialScreen} />
           <Route path="/cancel" component={CancelScreen} />
-          <Route path="/getintouch" component={GetInTouch}/>
+          <Route path="/vendor/getintouch" component={GetInTouch}/>
         </Switch>
       </BrowserRouter>
     )

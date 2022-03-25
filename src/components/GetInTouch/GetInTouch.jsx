@@ -11,13 +11,14 @@ export default class GetInTouch extends React.Component {
             <div className="div">
                 Yan's background here
             <div className="connect">
+                {/* <img alt="Close X" src={close} onClick={this.props.handleClose}/> */}
                 <div className="connect__top">
                     <div className="connect__top--header">Send Spa Essentials a message</div>
                     <div className="profile">
                         <div className="profile__avatar"><img src={Spa} alt="Spa" className="profile__avatar--img"/></div>
                         <div className="profile__text">
-                            <h4 className="profile__text--title">Spa Essentials</h4>
-                            <h5 className="profile__text--description">The place to purchase all your spa essential needs. Ranging from equipment to fragrance oils, we offer</h5>
+                            <h4 className="profile__text--title">Spa Essentials{this.props.vendorName}</h4>
+                            <h5 className="profile__text--description">{this.props.information}The place to purchase all your spa essential needs. Ranging from equipment to fragrance oils, we offer</h5>
                         </div>
                     </div>
                 </div>
@@ -27,7 +28,7 @@ export default class GetInTouch extends React.Component {
                     <form action="submit">
                     <input className='productInput' type="text" name="productInput" placeholder='Send quotes, description or details about your product'></input>
                     </form>
-                    <button className='productSubmit'><h5 className='btn-text'>Send Message</h5></button>
+                    <button className='productSubmit' alt="Send Message Button"onClick={this.props.handleClose}><h5 className='btn-text'>Send Message</h5></button>
                 </div>
                 
             </div>
