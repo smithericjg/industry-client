@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './CancelScreen.scss';
 import Modal from "../Modal/Modal";
+import { Link } from 'react-router-dom'; 
 
 export class CancelScreen extends Component {
 
@@ -20,6 +21,8 @@ export class CancelScreen extends Component {
       componentDidMount() {
           setTimeout(this.showModal, 1000);
       }
+
+     
     
   render() {
     console.log("CancelScreen");
@@ -37,6 +40,10 @@ export class CancelScreen extends Component {
     }
     return (
       <div className="cancel-screen">
+        <Link to='/vendor'>
+        <div className='cancel-screen__click-area' ></div>
+        </Link>
+        
           {modal}
       </div>
     )

@@ -4,7 +4,15 @@
     width: 100vw;
     background-image: url('../../assets/cancel_screen.png');
     background-size: cover;
-   
+   &__click-area{
+       position:fixed;
+       left:30vw;
+        top: 20vh;
+        width: 40rem;
+        height: 4rem;
+        cursor: pointer;
+        opacity: 0;
+   }
 
     &__save-button {
         position: absolute;

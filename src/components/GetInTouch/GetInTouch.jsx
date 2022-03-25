@@ -14,7 +14,7 @@ export default class GetInTouch extends React.Component {
                     <div className="connect__top">
                         <div className="connect__top--header">Send <span>{this.props.vendorName}</span> a message</div>
                         <div className="profile">
-                            <div className="profile__avatar"><img src={Spa} alt="Spa" className="profile__avatar--img" /></div>
+                            <div className="profile__avatar"><img src={this.props.image} alt="Spa" className="profile__avatar--img" /></div>
                             <div className="profile__text">
                                 <h4 className="profile__text--title">{this.props.vendorName}<img className='globeIcon' src={globe} alt="Globe Icon" /></h4>
                                 <h5 className="profile__text--description">{this.props.information}</h5>
