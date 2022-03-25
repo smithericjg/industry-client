@@ -30,7 +30,7 @@ export default class Modal extends React.Component {
                     Reach more sales by connecting with vendors
                   </h1>
                   <p className="modalContainer__text--sub">
-                    Use Shopify vendors and instantly sell your product to existing businesses.
+                    Use Shopify Vendors and instantly sell your product to existing businesses.
                   </p>
                 </div>
                 <div className="btn">
@@ -43,7 +43,7 @@ export default class Modal extends React.Component {
                       Not for this product
                     </button>
                   
-                  <Link to="/vendor">
+                  <Link className="modal__continue-link" to="/vendor">
                     <button className='connectBtn'>
                       Find matching vendors
                     </button>
