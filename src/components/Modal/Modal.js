@@ -1,11 +1,13 @@
 // modal
 import React from 'react';
 import "./Modal.scss"
-import close from "../assets/close-24px.svg";
+import close from "../../assets/close-24px.svg";
+import {Link} from 'react-router-dom';
 
 
 export default class Modal extends React.Component {
     render (){
+      console.log ('Modal');
         return(
           <>
             <div id="id01" className="modal">
@@ -27,13 +29,15 @@ export default class Modal extends React.Component {
                   </p>
                 </div>
                 <div className="btn">
-                  <button
-                    type="button"
-                    className="cancelBtn"
-                    onClick={this.props.closeModal}
-                  >
-                    Cancel
-                  </button>
+                 <Link to="/cancel">
+                    <button
+                        type="button"
+                        className="cancelBtn"
+                        onClick={this.props.closeModal}
+                      >
+                      Cancel
+                    </button>
+                  </Link>
                   <button className='connectBtn'>
                     CONNECT
                   </button>

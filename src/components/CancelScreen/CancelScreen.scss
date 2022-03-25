@@ -1,0 +1,17 @@
+.cancel-screen {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/cancel_screen.png');
+    background-size: cover;
+
+    &__save-button {
+        position: absolute;
+        top: 85vh;
+        left: 87vw;
+        height: 5vh;
+        width: 6vw;
+        opacity: 0;
+       
+    }
+}

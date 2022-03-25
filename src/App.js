@@ -1,38 +1,22 @@
 import './App.scss';
 import React from 'react';
-import Modal from "./components/Modal";
-import Button from './components/Button/Button';
+
+import InitialScreen from './components/InitialScreen/InitialScreen';
 
 import { Component } from 'react'; 
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CancelScreen from './components/CancelScreen/CancelScreen';
 
 export default class App extends Component {
-  state = {
-    showModal: false
-  }
-  showModal = () => {
-    this.setState({ showModal: true });
-  };
 
-  closeModal = () => {
-    this.setState({ showModal: false });
-  };
-
-  render() {
-
-    let modal = <></>;
-    if (this.state.showModal) {
-      modal = (
-        <Modal
-          closeModal={this.closeModal}
-        />
-      );
-    }
+  render () {
     return (
-      <>
-        <Button className=""
-          onClick={this.showModal}>SHOPIFY VENDORS</Button>
-        {modal}
-      </>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={InitialScreen} />
+          <Route path="/cancel" component={CancelScreen} />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
