@@ -1,17 +1,21 @@
 .vendor-screen {
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   background-image: url('../../assets/vendor_match.png');
   background-size: cover;
   background-repeat: no-repeat;
 
   &__list {
     position: absolute;
-    left: 472px;
-    top: 360px;
+    left: 24vw;
+    top: 35vh;
     display: flex;
-    justify-content: start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 61.5vw;
+    height: 80vh;
+    
+    
   }
 
   &__modal-placeholder {

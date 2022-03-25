@@ -15,7 +15,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={InitialScreen} />
-          <Route path="/cancel" component={CancelScreen} />
+          <Route path="/save" component={CancelScreen} />
           <Route path="/vendor" component={VendorScreen} />
         </Switch>
       </BrowserRouter>

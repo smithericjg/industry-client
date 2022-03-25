@@ -1,18 +1,20 @@
 .vendor-card {
-  width: 477.26px;
-  height: 566.89px;
+  width: 15.5vw;
+  height: 32rem;
   border-radius: 8px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
-  margin-left: 82px;
+  // margin-left: 82px;
+
   background-color: white;
 
   &__content {
+    height: 30rem;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: flex-start;
-    width: 90%;
-    margin: 5% 20px;
+    // width: 90%;
+    margin: .5rem 1rem .5rem 1rem;
   }
   
   &__image {
@@ -38,6 +40,7 @@
 
   &__information {
     margin-top: 40px;
+    height: 8rem;
   }
 
 
@@ -45,13 +48,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.49144px;
-    margin-top: 40px;
-    width: 173.71px;
+    // padding: 1.49144px;
+    // width: 173.71px;
+    width: 100%;
     height: 56.85px;
     background-color: white;
     border-radius: 7.45718px;
     border: solid 2px rgba(grey, 0.5);
     font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 }
