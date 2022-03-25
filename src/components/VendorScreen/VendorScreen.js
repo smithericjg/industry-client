@@ -4,6 +4,7 @@ import natureWorks from '../../assets/nature_works.png';
 import somaFurniture from '../../assets/soma_furniture.png';
 import './VendorScreen.scss';
 import VendorCard from '../VendorCard/VendorCard';
+import GetInTouch from '../GetInTouch/GetInTouch';
 
 class VendorScreen extends React.Component {
   state = {
@@ -20,12 +21,17 @@ class VendorScreen extends React.Component {
 
   handleCloseModal = (event) => {
     event.preventDefault();
+    this.setState({
+      showModal: false
+    })
   }
 
-  handleShowModal = (event) => {
-    event.preventDefault();
+  handleShowModal = (image, vendorName, information) => {
     this.setState({
-      showModal: true
+      showModal: true,
+      image,
+      vendorName,
+      information,
     });
   }
 
@@ -50,21 +56,21 @@ class VendorScreen extends React.Component {
     return (
       <div className="vendor-screen">
         {
-          this.state.showModal &&
-          <div className="vendor-screen__modal-placeholder">
-            Show Modal
-          </div>
+          this.state.showModal && <GetInTouch image={this.state.image} vendorName={this.state.vendorName} information={this.state.information} handleConfirm={this.handleMessageSent} handleClose={this.handleCloseModal} />
+          // <div className="vendor-screen__modal-placeholder">
+          //   Show Modal
+          // </div>
         }
         <div className="vendor-screen__list">
           {
             vendorList.map((vendor, index) => {
               return (
-                <VendorCard 
+                <VendorCard
                   key={index}
                   image={vendor.image}
                   vendorName={vendor.vendorName}
                   information={vendor.information}
-                  handleClick={this.handleShowModal}
+                  handleClick={() => { this.handleShowModal(vendor.image, vendor.vendorName, vendor.information) }}
                 />
               );
             })

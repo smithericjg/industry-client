@@ -1,6 +1,6 @@
 import './App.scss';
 import React from 'react';
-
+import GetInTouch from './components/GetInTouch/GetInTouch';
 import InitialScreen from './components/InitialScreen/InitialScreen';
 
 import { Component } from 'react'; 
@@ -15,6 +15,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={InitialScreen} />
+          {/* <Route path="/vendor/getintouch" component={GetInTouch}/> */}
           <Route path="/save" component={CancelScreen} />
           <Route path="/vendor" component={VendorScreen} />
         </Switch>
