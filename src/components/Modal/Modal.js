@@ -6,12 +6,17 @@ import {Link} from 'react-router-dom';
 
 
 export default class Modal extends React.Component {
+    submitHandler = e => {
+      e.preventDefault();
+
+    }
+
     render (){
       console.log ('Modal');
         return(
           <>
             <div id="id01" className="modal">
-            <form className="modal-content" action="/action_page.php">
+            <form className="modal-content" onSubmit={this.submitHandler}>
               <img
                 src={close}
                 onClick={this.props.closeModal}
@@ -22,25 +27,27 @@ export default class Modal extends React.Component {
               <div className="modalContainer">
                 <div className="modalContainer__text">
                   <h1 className="modalContainer__text--head">
-                    SHOPIFY VENDORS
+                    Reach more sales by connecting with vendors
                   </h1>
                   <p className="modalContainer__text--sub">
-                    WE USE NANO-TECH-SUPER-DUPER-ALGORITHMS TO SELL YOUR STUFF TO OTHER COMPANIES
+                    Use Shopify vendors and instantly sell your product to existing businesses.
                   </p>
                 </div>
                 <div className="btn">
-                 <Link to="/cancel">
+                 
                     <button
                         type="button"
                         className="cancelBtn"
                         onClick={this.props.closeModal}
                       >
-                      Cancel
+                      Not for this product
+                    </button>
+                  
+                  <Link to="/vendor">
+                    <button className='connectBtn'>
+                      Find matching vendors
                     </button>
                   </Link>
-                  <button className='connectBtn'>
-                    CONNECT
-                  </button>
                 </div>
               </div>
             </form>

@@ -6,6 +6,7 @@ import InitialScreen from './components/InitialScreen/InitialScreen';
 import { Component } from 'react'; 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import CancelScreen from './components/CancelScreen/CancelScreen';
+import VendorScreen from './components/VendorScreen/VendorScreen';
 
 export default class App extends Component {
 
@@ -14,8 +15,9 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={InitialScreen} />
-          <Route path="/cancel" component={CancelScreen} />
-          <Route path="/vendor/getintouch" component={GetInTouch}/>
+          {/* <Route path="/vendor/getintouch" component={GetInTouch}/> */}
+          <Route path="/save" component={CancelScreen} />
+          <Route path="/vendor" component={VendorScreen} />
         </Switch>
       </BrowserRouter>
     )
