@@ -47,14 +47,18 @@ span{
         flex-direction: column;
         margin-left: 0.5rem;
         margin-top: 1.5rem;
+
         &--description{
-            margin: 0; 
+            margin: .5rem 0 0 0; 
             font-weight:400;
             line-height: 1.25rem;
         }
         &--title{
             margin:0;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            height: 1.25rem;
         }
    } 
    &__avatar{
@@ -75,6 +79,10 @@ span{
     height: 9.75rem;
     width: 367px;
     border-radius: 0.5rem;
+
+    &::placeholder {
+        padding: 1rem;
+    }
    
 }
 .productSubmit{
@@ -111,6 +119,7 @@ button{
 .globeIcon{
     width: 1.25rem;
     height:1.25rem;
+    padding: 0 0 0 0.5rem;
 }
 
 .div {
