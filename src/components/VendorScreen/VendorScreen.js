@@ -13,9 +13,11 @@ class VendorScreen extends React.Component {
   }
 
   handleMessageSent = (event) => {
+    console.log ("handleMessageSent")
     event.preventDefault();
     this.setState({
-      messageSent: true
+      messageSent: true,
+      showModal: false
     });
   }
 
@@ -33,6 +35,12 @@ class VendorScreen extends React.Component {
       vendorName,
       information,
     });
+  }
+
+  handleCloseMessage = () => {
+    this.setState({ 
+      messageSent: false
+    })
   }
 
   render() {
@@ -78,13 +86,12 @@ class VendorScreen extends React.Component {
         </div>
         {
           this.state.messageSent &&
-          <div className="vendor-screen__confirmation">
-            <p>Message Sent</p>
-            <p>x</p>
+          <div onClick={this.handleCloseMessage} className="vendor-screen__confirmation">
+            <p className="vendor-screen__confirmation-message">Message Sent  X</p>
           </div>
         }
       </div>
-    );
+    )
   }
 }
 

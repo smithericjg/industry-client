@@ -11,6 +11,7 @@ import VendorScreen from './components/VendorScreen/VendorScreen';
 export default class App extends Component {
 
   render () {
+    document.title="Shopify"
     return (
       <BrowserRouter>
         <Switch>

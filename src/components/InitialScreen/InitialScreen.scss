@@ -7,10 +7,12 @@
 
     &__save-button {
         position: absolute;
-        top: 85vh;
-        left: 87vw;
-        height: 5vh;
-        width: 6vw;
-        opacity: 0;
+        top: 80vh;
+        left: 80vw;
+        height: 15vh;
+        width: 26vw;
+        opacity: .5;
+        border: 1px solid red;
+        cursor: pointer;
     }
 }

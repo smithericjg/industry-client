@@ -24,6 +24,9 @@
   margin-right: 0.75rem;
   width: 10rem;
   height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   cursor: pointer;
   
@@ -54,6 +57,9 @@
   border-radius: 4px;
   font-size: 0.8125rem;
   background-color:#008060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   
 }
@@ -131,7 +137,9 @@
   // overflow: auto;
   background-color: #ffffff;
   
-  
+  &__continue-link {
+    text-decoration: none;
+  }
   &__screen-container {
     display: flex;
     justify-content: center;

@@ -29,12 +29,31 @@
   }
 
   &__confirmation {
-    background-color: black;
-    color: #202123;
-    width: 188px;
-    height: 60px;
-    position: absolute;
-    left: calc(50% - 188px / 2 + 53px);
-    top: 964px;
+    
+    // width: 188px;
+    // height: 60px;
+    // position: absolute;
+    // left: calc(50% - 188px / 2 + 53px);
+    // top: 964px;
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__confirmation-message {
+    display: block;
+    width: 15rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #202123;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
   }
 }

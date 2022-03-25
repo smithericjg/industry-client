@@ -18,7 +18,7 @@ export class CancelScreen extends Component {
 
 
       componentDidMount() {
-          setTimeout(this.showModal, 1500);
+          setTimeout(this.showModal, 1000);
       }
     
   render() {
