@@ -1,0 +1,36 @@
+.vendor-screen {
+  width: 1920px;
+  height: 1080px;
+  background-image: url('../../assets/vendor_match.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__list {
+    position: absolute;
+    left: 472px;
+    top: 360px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__modal-placeholder {
+    position: absolute;
+    left: 690px;
+    top: 162px;
+    width: 540.76px;
+    height: 756px;
+    background-color: red;
+    z-index: 100;
+  }
+
+  &__confirmation {
+    background-color: black;
+    color: #202123;
+    width: 188px;
+    height: 60px;
+    position: absolute;
+    left: calc(50% - 188px / 2 + 53px);
+    top: 964px;
+  }
+}
