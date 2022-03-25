@@ -5,4 +5,16 @@ This project was put together during a hackathon where a cross-collaborative tea
 # Installation
 
 1. Clone the repository.
-2. Go into the program's root directory. Then run: npm install. Then run npm start.
+2. Go into the program's root directory:
+
+run
+```bash
+npm install
+```
+to install all necessary dependencies,
+
+run
+```bash
+npm start
+```
+to start our app.
